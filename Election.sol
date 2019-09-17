@@ -19,14 +19,14 @@ contract Election {
   	);
 
   constructor() public {
-  	dodajKnjigu("Mladić", "Roman");
-  	dodajKnjigu("Kockar", "Roman");
-    dodajKnjigu("Zločin i kazna", "Filozofska fikcija");
-    dodajKnjigu("Zapisi iz mrtvog doma", "Filozofska fikcija");
-    dodajKnjigu("Idiot", "Filozofska fikcija");
+  	dodajStranku("HDZ", "Hrvatska demokratska zajednica");
+  	dodajStranku("SDP", "Socijaldemokratska partija Hrvatske");
+    dodajStranku("Zivi zid", "Zivi zid");
+    dodajStranku("IDS", "Istarski demokratski sabor");
+    dodajStranku("Glas", "Glas");
   }
 
-  function dodajKnjigu (string memory _ime, string memory _vrsta)private {
+  function dodajStranku (string memory _ime, string memory _vrsta)private {
   	candidatesCount ++;
   	candidates[candidatesCount] = Candidate(candidatesCount, _ime, _vrsta, 0);
   	}
